@@ -1,8 +1,18 @@
 
-<div>
+<div class="first_header">
   <div class="header">
     <h4>Cocktail</h4>
     <!-- add add cocktail to it -->
+    <button class="cybr-btn">
+      <%= link_to 'Add Cocktail', new_cocktail_path %><span aria-hidden>_</span>
+      <span aria-hidden class="cybr-btn__glitch">Add Cocktail_</span>
+      <span aria-hidden class="cybr-btn__tag">404</span>
+    </button>
+
+      <%= link_to new_cocktail_path, class: "cybr-btn" do %>Add Cocktail<span aria-hidden>_</span>
+      <span aria-hidden class="cybr-btn__glitch">Add Cocktail_</span>
+      <span aria-hidden class="cybr-btn__tag">404</span>
+      <% end %>
     <%= link_to 'Add Cocktail', new_cocktail_path, class: "btn btn-outline-primary" %>
   </div>
   <h1 class="all_cocktails">All our cocktails</h1>
@@ -18,13 +28,19 @@
     </div>
     <button class="cybr-btn">
       New Cocktail<span aria-hidden>_</span>
-      <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
-      <span aria-hidden class="cybr-btn__tag">R25</span>
+      <span aria-hidden class="cybr-btn__glitch">New Cocktail_</span>
+      <span aria-hidden class="cybr-btn__tag">404</span>
     </button>
     <button class="cybr-btn">
       DESTROY<span aria-hidden>_</span>
-      <span aria-hidden class="cybr-btn__glitch">Buttons_</span>
-      <span aria-hidden class="cybr-btn__tag">R25</span>
+      <span aria-hidden class="cybr-btn__glitch">DESTROY_</span>
+      <span aria-hidden class="cybr-btn__tag">500</span>
     </button>
+
+
+    <%= link_to new_cocktail_path, class: "cybr-btn" do %>Add Cocktail<span aria-hidden>_</span>
+      <span aria-hidden class="cybr-btn__glitch">Add Cocktail_</span>
+      <span aria-hidden class="cybr-btn__tag">404</span>
+    <% end %>
   </div>
 </div>
