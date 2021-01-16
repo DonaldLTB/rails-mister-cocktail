@@ -1,0 +1,17 @@
+<div class="header">
+  <h4>Cocktail</h4>
+  <!-- add add cocktail to it -->
+  <%= link_to 'Add cocktail', new_cocktail_path, class: "btn btn-outline-primary" %>
+</div>
+<h1 class="all_cocktails">All our cocktails</h1>
+<div class="container">
+  <div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card">
+      <h5><%= cocktail.name %></h5>
+          <td><%= link_to 'More Info', cocktail_path(cocktail.id) %></td>
+        </div>
+    </div>
+  <% end %>
+  </div>
+</div>
