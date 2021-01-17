@@ -1,22 +1,31 @@
 
 <div class="first_header">
   <div class="header">
-    <h4>Cocktail</h4>
+    <h1>Cyber77Cocktail</h1>
     <!-- add add cocktail to it -->
-    <button class="cybr-btn" style="color: white">
+    <button class="cybr-btn">
       <%= link_to 'Add Cocktail', new_cocktail_path %><span aria-hidden>_</span>
       <span aria-hidden class="cybr-btn__glitch"><%= link_to 'Add Cocktail', new_cocktail_path %>_</span>
       <span aria-hidden class="cybr-btn__tag">404</span>
     </button>
 
+        <button class="cybr-btn">
+      <%= link_to 'Add Cocktail', new_cocktail_path %><span aria-hidden>_</span>
+      <span aria-hidden class="cybr-btn__glitch">DESTROY_</span>
+      <span aria-hidden class="cybr-btn__tag">500</span>
+    </button>
+
   </div>
-  <h1 class="all_cocktails" style="font-family: Orbitron">All our cocktails</h1>
+  <h2 class="all_cocktails">Cyber Cocktail List</h2>
   <div class="container">
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
-      <div class="card">
-        <h5 style="font-family: Orbitron"><%= cocktail.name %></h5>
-            <td><%= link_to 'More Info', cocktail_path(cocktail.id) %>
+      <div class="card-self">
+        <h5><%= cocktail.name %></h5>
+            <td><%= link_to cocktail_path(cocktail.id), class: "cybr-btn" do %>More Info<span aria-hidden>_</span>
+    <span aria-hidden class="cybr-btn__glitch">Add Cocktail_</span>
+    <span aria-hidden class="cybr-btn__tag">404</span>
+              <% end %>
             </td>
       </div>
     </div>

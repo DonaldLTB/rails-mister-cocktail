@@ -190,6 +190,6 @@ body .cybr-btn + .cybr-btn {
   }
 }
 
-.cybr-btn:nth-of-type(2) {
+.cybr-btn:nth-of-type(even) {
   --primary-hue: 260;
 }

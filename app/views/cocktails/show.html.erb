@@ -1,5 +1,5 @@
 <div class="header">
-  <h4>Cocktail</h4>
+  <h2>Cyber77Cocktail</h2>
       <button class="cybr-btn" style="float: right;">
       <%= link_to 'Add Cocktail', new_cocktail_path %><span aria-hidden>_</span>
       <span aria-hidden class="cybr-btn__glitch"><%= link_to 'Add Cocktail', new_cocktail_path %>_</span>
@@ -16,7 +16,7 @@
 
 <ul class="list-group">
   <% @cocktail.doses.each do |dose| %>
-    <li class="list-group-item"><%= dose.description %> <%= link_to "Remove",
+    <li class="list-group-item-self"><%= dose.description %> <%= link_to "Remove",
       dose_path(dose),
       method: :delete,
       data: { confirm: "Are you sure?" } %>

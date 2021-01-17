@@ -2,7 +2,12 @@
 
 body {
   background-color:#111;
-  font-family: 'Orbitron', courier, sans-serif;
+  font-family: 'Cyber';
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Cyber';
+  // font-family: 'Orbitron', courier, sans-serif;
 }
 
 p {
@@ -13,7 +18,8 @@ p {
 h1 {font-size:5em;}
 a {
   text-decoration:none;
-  color:rgba(255,255,255,.3); // Fallback for Clipping the anchor text on nonWebkit browsers
+  // color:rgba(255,255,255,.3); // Fallback for Clipping the anchor text on nonWebkit browsers
+  color: white;
 }
 
 .glow {
