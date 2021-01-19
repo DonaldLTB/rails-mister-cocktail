@@ -11,7 +11,7 @@
 
         <button class="cybr-btn">
       <%= link_to 'Add Cocktail', new_cocktail_path %><span aria-hidden>_</span>
-      <span aria-hidden class="cybr-btn__glitch">DESTROY_</span>
+      <span aria-hidden class="cybr-btn__glitch">Add Cocktail_</span>
       <span aria-hidden class="cybr-btn__tag">500</span>
     </button>
 
@@ -22,10 +22,8 @@
       <% @cocktails.each do |cocktail| %>
       <div class="card-self">
         <h5><%= cocktail.name %></h5>
-            <td><%= link_to cocktail_path(cocktail.id), class: "cybr-btn" do %>More Info<span aria-hidden>_</span>
-    <span aria-hidden class="cybr-btn__glitch">Add Cocktail_</span>
-    <span aria-hidden class="cybr-btn__tag">404</span>
-              <% end %>
+            <td>
+              <%= link_to 'More Info', cocktail_path(cocktail.id) %>
             </td>
       </div>
     </div>
