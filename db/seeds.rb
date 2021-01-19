@@ -8,3 +8,10 @@
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+
+require "open-uri"
+
+file = URI.open('https://images.freeimages.com/images/large-previews/84e/pineapple-drink-1571469.jpg')
+cocktailse = Cocktail.new(name: 'Laughing Buddha 2')
+cocktailse.photo.attach(io: file, filename: 'lbcocktail.jpg', content_type: 'image/jpg')
+cocktailse.save
