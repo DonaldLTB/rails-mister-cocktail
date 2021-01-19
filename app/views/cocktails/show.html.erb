@@ -1,13 +1,15 @@
 <div class="header">
   <h2>Cyber77Cocktail</h2>
       <button class="cybr-btn" style="float: right;">
-      <%= link_to 'Add Cocktail', new_cocktail_path %><span aria-hidden>_</span>
-      <span aria-hidden class="cybr-btn__glitch"><%= link_to 'Add Cocktail', new_cocktail_path %>_</span>
+      <%= link_to 'Add another Cocktail', new_cocktail_path %><span aria-hidden>_</span>
+      <span aria-hidden class="cybr-btn__glitch"><%= link_to 'Add another Cocktail', new_cocktail_path %>_</span>
       <span aria-hidden class="cybr-btn__tag">404</span>
       </button>
 </div>
 
 <p id="notice"><%= notice %></p>
+
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
 
 <p>
   <strong>Name:</strong>

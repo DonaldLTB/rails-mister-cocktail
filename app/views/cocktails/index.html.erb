@@ -29,6 +29,15 @@
     </div>
     <% end %>
   </div>
+
+  <div>
+    <%= cl_image_tag("wmptw5lhibq3vy4whrob",
+          width: 400, height: 300, crop: :fill) %>
+
+    <!-- for face detection -->
+    <%= cl_image_tag("efnsnojorpi9dzqgd0lr",
+          width: 150, height: 150, crop: :thumb, gravity: :face) %>
+  </div>
   <!-- <div>
     <button class="cybr-btn">
       New Cocktail<span aria-hidden>_</span>
