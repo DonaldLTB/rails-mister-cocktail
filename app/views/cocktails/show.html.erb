@@ -1,43 +1,45 @@
-<div class="header">
-  <h2>Cyber77Cocktail</h2>
+<div class="banner">
+  <h1>Cocktail</h1>
 </div>
 
-<p id="notice"><%= notice %></p>
-<% if @cocktail.photo.attached? == true %>
-  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-  <p><%= link_to "Remove",
-      cocktail_path(@cocktail),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %></p>
-</p>
-
-<ul class="list-group">
-  <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.ingredient.name %></li>
-    <li class="list-group-item-self"><%= dose.description %> <%= link_to "Remove",
-      dose_path(dose),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-    </li>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <% if @cocktail.photo.attached? == true %>
+    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
-</ul>
 
-<ul class="list-group">
-  <% @cocktail.reviews.each do |review| %>
-    <li class="list-group-item-self"><%= review.content %> <%= link_to "Remove",
-      review_path(review),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-    </li>
-  <% end %>
-</ul>
+  <p>
+    <strong>Name:</strong>
+    <%= @cocktail.name %>
+    <p><%= link_to "Remove",
+        cocktail_path(@cocktail),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %></p>
+  </p>
+
+  <ul class="list-group">
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %></li>
+      <li class="list-group-item-self"><%= dose.description %> <%= link_to "Remove",
+        dose_path(dose),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul class="list-group">
+    <% @cocktail.reviews.each do |review| %>
+      <li class="list-group-item-self"><%= review.content %> <%= link_to "Remove",
+        review_path(review),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+      </li>
+    <% end %>
+  </ul>
 
 
-<%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
-<%= link_to 'Back', cocktails_path %>
-<%= link_to 'Add Dose', new_cocktail_dose_path(@cocktail) %>
+  <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
+  <%= link_to 'Back', cocktails_path %>
+  <%= link_to 'Add Dose', new_cocktail_dose_path(@cocktail) %>
+</div>

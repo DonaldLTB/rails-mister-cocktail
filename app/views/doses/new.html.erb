@@ -1,16 +1,19 @@
-<h1>Add Dose</h1>
+<div class="banner">
+  <h1>Add Dose</h1>
+</div>
+<div class="container">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
+    <div class="form-inputs">
+      <%= f.input :description %>
+      <%= f.association :ingredient, input_html: { class: 'select2' } %>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.input :description %>
-    <%= f.association :ingredient, input_html: { class: 'select2' } %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
-<a>
-<%= link_to 'Cancel', @cocktail %>
-</a>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+  <a>
+  <%= link_to 'Cancel', @cocktail %>
+  </a>
+</div>
