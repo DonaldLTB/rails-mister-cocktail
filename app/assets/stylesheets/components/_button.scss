@@ -19,7 +19,8 @@
 // }
 
 body .cybr-btn + .cybr-btn {
-  margin-top: 2rem;
+  // margin-top: 2rem;
+  margin-left: 10px;
 }
 
 .cybr-btn {
@@ -28,7 +29,7 @@ body .cybr-btn + .cybr-btn {
   --primary-hue: 0;
   --primary-lightness: 50;
   --color: hsl(0, 0%, 100%);
-  --font-size: 26px;
+  --font-size: 16px;
   --shadow-primary-hue: 180;
   --label-size: 9px;
   --shadow-secondary-hue: 60;
@@ -54,9 +55,9 @@ body .cybr-btn + .cybr-btn {
   position: relative;
   font-weight: 700;
   border: 0;
-  min-width: 100px;
-  height: 75px;
-  line-height: 75px;
+  // min-width: 100px;
+  height: 50px;
+  // line-height: 75px;
   transition: background 0.2s;
 }
 
