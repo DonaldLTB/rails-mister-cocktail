@@ -28,5 +28,17 @@
   <% end %>
 </ul>
 
+<ul class="list-group">
+  <% @cocktail.reviews.each do |review| %>
+    <li class="list-group-item-self"><%= review.content %> <%= link_to "Remove",
+      review_path(review),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
 <%= link_to 'Back', cocktails_path %>
 <%= link_to 'Add Dose', new_cocktail_dose_path(@cocktail) %>
