@@ -15,7 +15,13 @@ import { initSelect2 } from '../components/init_select2';
 
 
 document.addEventListener('turbolinks:load', () => {
-  loadDynamicBannerText();
-  initSelect2();
-  initUpdateNavbarOnScroll();
+  if (document.querySelector("#banner-typed-text")) {
+    loadDynamicBannerText();
+  }
+  if (document.querySelector(".select2")) {
+    initSelect2();
+  }
+  // initUpdateNavbarOnScroll();
 });
+
+
