@@ -3,9 +3,7 @@
   <div class="banner">
     <h1>Cyber77Cocktail</h1>
     <!-- add add cocktail to it -->
-    <p>
-      <span id="banner-typed-text"></span>
-    </p>
+
 
     <button class="cybr-btn">
       <%= link_to 'Add Cocktail', new_cocktail_path %><span aria-hidden>_</span>
@@ -18,19 +16,25 @@
       <span aria-hidden class="cybr-btn__glitch">Add Cocktail_</span>
       <span aria-hidden class="cybr-btn__tag">500</span>
     </button>
-
   </div>
+
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
   <h2 class="all_cocktails">Cyber Cocktail List</h2>
   <div class="container">
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
-      <div class="card-self">
+      <!-- <div class="card-self"> -->
 
-        <h5><%= cocktail.name %></h5>
+      <% if cocktail.photo.attached? == true %>
+        <div class="card-self" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+      <% end %>
+          <h5><%= cocktail.name %></h5>
             <td>
               <%= link_to 'More Info', cocktail_path(cocktail.id) %>
             </td>
-      </div>
+        </div>
     </div>
     <% end %>
   </div>
