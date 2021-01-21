@@ -1,10 +1,5 @@
 <div class="header">
   <h2>Cyber77Cocktail</h2>
-      <button class="cybr-btn" style="float: right;">
-      <%= link_to 'Add another Cocktail', new_cocktail_path %><span aria-hidden>_</span>
-      <span aria-hidden class="cybr-btn__glitch"><%= link_to 'Add another Cocktail', new_cocktail_path %>_</span>
-      <span aria-hidden class="cybr-btn__tag">404</span>
-      </button>
 </div>
 
 <p id="notice"><%= notice %></p>
@@ -15,6 +10,10 @@
 <p>
   <strong>Name:</strong>
   <%= @cocktail.name %>
+  <p><%= link_to "Remove",
+      cocktail_path(@cocktail),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
 </p>
 
 <ul class="list-group">
